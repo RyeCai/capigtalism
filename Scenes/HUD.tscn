@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dinqycx0wiftv"]
+
+[ext_resource type="Texture2D" uid="uid://b1ygppnub6kvy" path="res://Assets/Placeholder/bullet.png" id="1_sd512"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_entsu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sd512"]
+font_size = 30
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1200.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_entsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(21.5, 18.5)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("1_sd512")
+
+[node name="MoneyAmount" type="Label" parent="."]
+offset_left = 40.0
+offset_right = 109.0
+offset_bottom = 42.0
+size_flags_horizontal = 4
+text = "0000"
+label_settings = SubResource("LabelSettings_sd512")
+horizontal_alignment = 1
+vertical_alignment = 1
