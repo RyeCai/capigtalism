@@ -52,6 +52,7 @@ func get_input() -> void:
         shoot.emit(position, mouse_direction)
         can_shoot = false
         $ShootCooldown.start()
+        $ShootSound.play()
 
 
 func _physics_process(_delta: float) -> void:

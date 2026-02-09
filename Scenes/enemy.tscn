@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://dxtefltfmsolu"]
+[gd_scene load_steps=23 format=3 uid="uid://dxtefltfmsolu"]
 
 [ext_resource type="Script" uid="uid://cir5tg8vu37xn" path="res://Scenes/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://4c180ygimlm2" path="res://Assets/Enemies/Bat_Sprite_Sheet.png" id="2_1f0kj"]
+[ext_resource type="AudioStream" uid="uid://iq7g4lea82cy" path="res://Assets/Sound/hurt.wav" id="3_afpow"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1f0kj"]
 atlas = ExtResource("2_1f0kj")
@@ -172,6 +173,16 @@ shape = SubResource("RectangleShape2D_4gyqm")
 
 [node name="DespawnTimer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_afpow")
+volume_db = -4.0
+pitch_scale = 1.2
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_afpow")
+volume_db = -6.0
+pitch_scale = 3.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

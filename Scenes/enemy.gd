@@ -35,6 +35,7 @@ func die() -> void:
     $Area2D/CollisionShape2D.set_deferred("disabled", true)
     drop_item()
     $DespawnTimer.start()
+    $DeathSound.play()
 
 
 func drop_item() -> void:
@@ -46,6 +47,7 @@ func drop_item() -> void:
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
+    $HitSound.play()
     hit_player.emit()
 
 

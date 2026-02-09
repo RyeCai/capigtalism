@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://xmts8rd4sjjq"]
+[gd_scene load_steps=112 format=3 uid="uid://xmts8rd4sjjq"]
 
 [ext_resource type="Script" uid="uid://rac6o1tba4b5" path="res://Scenes/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://i84h8p76loru" path="res://Assets/Player/Walk/walk_Down.png" id="2_1jxqw"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dhf5djmgbcyj2" path="res://Assets/Player/Idle/Idle_Left_Up.png" id="4_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://b0xslxwnugodt" path="res://Assets/Player/Idle/Idle_Up.png" id="5_7dp3o"]
 [ext_resource type="Texture2D" uid="uid://d08icq0orocpc" path="res://Assets/Player/Idle/Idle_Right_Up.png" id="6_h4iuc"]
+[ext_resource type="AudioStream" uid="uid://crhd67r4whv4p" path="res://Assets/Sound/tap.wav" id="13_ukyrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
 atlas = ExtResource("2_8erm5")
@@ -887,5 +888,10 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="ShootCooldown" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_ukyrk")
+volume_db = -6.0
+pitch_scale = 0.4
 
 [connection signal="timeout" from="ShootCooldown" to="." method="_on_shoot_cooldown_timeout"]
