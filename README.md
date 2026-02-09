@@ -10,7 +10,7 @@ PIGS - Sadly none
 ## Code Credits:
 
 ​The game is an extension of the following series of videos:
-​​Top Down Survival Shooter In Godot Playlist​ by Coding with Russ
+​​ Top Down Survival Shooter In Godot Playlist​ by Coding with Russ
 https://www.youtube.com/playlist?list=PLjcN1EyupaQmVgWOWFlQxgJ24sUi3Le_X
 
 ## Asset Credits:
