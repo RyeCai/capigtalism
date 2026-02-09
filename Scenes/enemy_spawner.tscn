@@ -15,7 +15,6 @@ enemy_scene = ExtResource("2_00s5r")
 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 0.75
-autostart = true
 
 [node name="EnemyPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ewhtn")

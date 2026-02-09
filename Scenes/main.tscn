@@ -1597,7 +1597,6 @@ bullet_scene = ExtResource("5_21xkr")
 [node name="EnemySpawner" parent="World" instance=ExtResource("3_1bvp3")]
 
 [node name="MoneyTimer" type="Timer" parent="World"]
-autostart = true
 
 [node name="Label" type="Label" parent="World"]
 anchors_preset = 8
@@ -1613,9 +1612,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
-text = "Collect money to escape the room! Time is money!
-Use WASD/Arrow Keys to move
-Use Mouse to aim and LMB to shoot"
+text = "Use WASD/Arrow Keys to move
+Use Mouse to aim and LMB to shoot
+Shoot to start. Remember, time is money!"
 horizontal_alignment = 1
 
 [node name="Hud" parent="." instance=ExtResource("7_6bp64")]
