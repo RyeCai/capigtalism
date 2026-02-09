@@ -5,15 +5,16 @@
 
 [sub_resource type="Curve2D" id="Curve2D_ewhtn"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -32, -32, 0, 0, 0, 0, 1232, -32, 0, 0, 0, 0, 1232, 752, 0, 0, 0, 0, -32, 752, 0, 0, 0, 0, -32, -32)
+"points": PackedVector2Array(0, 0, 0, 0, -32, -32, 0, 0, 0, 0, 1232, -32, 0, 0, 0, 0, 1232.1062, 338.16455, 0, 0, 0, 0, 1232, 752, 0, 0, 0, 0, -32, 752, 0, 0, 0, 0, -32, -32)
 }
-point_count = 5
+point_count = 6
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_ewhtn")
 enemy_scene = ExtResource("2_00s5r")
 
 [node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 0.75
 autostart = true
 
 [node name="EnemyPath" type="Path2D" parent="."]

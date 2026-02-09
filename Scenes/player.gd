@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var movement_speed: float = 300.0
+@export var movement_speed: float
 var character_direction: Vector2
 var screen_size: Vector2
 var can_shoot: bool
@@ -10,7 +10,12 @@ signal shoot
 
 func _ready() -> void:
     screen_size = get_viewport_rect().size
+    reset()
+
+
+func reset() -> void:
     position = screen_size / 2
+    movement_speed = 400.0
     can_shoot = true
 
 
@@ -34,12 +39,13 @@ func get_input() -> void:
     var angle: float = snappedf(mouse_position.angle(), PI / 4) / (PI / 4)
     angle = wrapi(int(angle), 0, 8)
     # Convert angle to string for animation name
-    $AnimatedSprite2D.animation = 'walk' + str(int(angle))
 
     if velocity.length() > 0:
-        $AnimatedSprite2D.play()
+        $AnimatedSprite2D.animation = 'walk' + str(int(angle))
     else:
-        $AnimatedSprite2D.stop()
+        $AnimatedSprite2D.animation = 'idle' + str(int(angle))
+
+    $AnimatedSprite2D.play()
 
     if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_shoot:
         var mouse_direction: Vector2 = get_global_mouse_position() - position

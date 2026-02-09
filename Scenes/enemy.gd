@@ -31,9 +31,10 @@ func _physics_process(_delta: float) -> void:
 
 func die() -> void:
     alive = false
-    $AnimatedSprite2D.stop()
+    $AnimatedSprite2D.play("death")
     $Area2D/CollisionShape2D.set_deferred("disabled", true)
     drop_item()
+    $DespawnTimer.start()
 
 
 func drop_item() -> void:
@@ -46,3 +47,11 @@ func drop_item() -> void:
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
     hit_player.emit()
+
+
+func _on_despawn_timer_timeout() -> void:
+    queue_free()
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+    $AnimatedSprite2D.play("despawn")

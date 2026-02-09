@@ -14,7 +14,7 @@ func _on_bullet_duration_timeout() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-    if body.name == 'Obstacles':
+    if body.name == 'Environment':
         queue_free()
     else:
         if body.alive:

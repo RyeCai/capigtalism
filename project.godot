@@ -24,6 +24,10 @@ window/size/viewport_height=720
 
 project/assembly_name="Capigtalism"
 
+[gui]
+
+theme/custom_font="uid://dklnp1xn1830x"
+
 [input]
 
 move_up={
@@ -62,4 +66,4 @@ move_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0.47653604, 0.66399765, 0.13902938, 1)
+environment/defaults/default_clear_color=Color(0.24, 0.24, 0.24, 1)
