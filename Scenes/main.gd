@@ -32,6 +32,7 @@ func reset() -> void:
     get_tree().call_group("items", "queue_free")
     get_tree().paused = false
     $GameOver.hide()
+    $World/TutorialLabel.show()
     $World/Player.reset()
 
 
@@ -52,6 +53,7 @@ func _on_enemy_spawner_hit_p() -> void:
 func _on_player_shoot(_pos: Vector2, _dir: Vector2) -> void:
     if !game_started and !get_tree().paused:
         start_game()
+        $World/TutorialLabel.hide()
         game_started = true
     add_money(SHOOTING_COST)
 
