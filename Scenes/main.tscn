@@ -1617,7 +1617,6 @@ Shoot to start. Remember, time is money!"
 horizontal_alignment = 1
 
 [node name="Hud" parent="." instance=ExtResource("7_6bp64")]
-visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("9_ynf5e")]
 process_mode = 2
